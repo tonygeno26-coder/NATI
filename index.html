@@ -288,7 +288,7 @@ footer .copy { font-size: 12px; color: rgba(255,255,255,0.2); margin-top: 20px; 
   <div class="nav-logo">
     <img src="logo.png" alt="NATI" style="height:48px;object-fit:contain">
   </div>
-  <button class="nav-cta" onclick="document.getElementById('checkout').scrollIntoView({behavior:'smooth'})">Order Now — $30</button>
+  <a href="https://buy.stripe.com/aFaeV66BNguOd1Jd4A9AA03" class="nav-cta">Order Now — $30</a>
 </nav>
 
 <!-- HERO -->
@@ -308,7 +308,7 @@ footer .copy { font-size: 12px; color: rgba(255,255,255,0.2); margin-top: 20px; 
       <div class="hero-feature"><div class="icon">✅</div>100% legal — no prescription needed</div>
     </div>
     <div class="hero-btns">
-      <a href="#checkout" class="btn-main">🍄 Order Now — $30</a>
+      <a href="https://buy.stripe.com/aFaeV66BNguOd1Jd4A9AA03" class="btn-main">🍄 Order Now — $30</a>
       <a href="#effects" class="btn-outline-hero">Learn More</a>
     </div>
   </div>
@@ -437,105 +437,27 @@ footer .copy { font-size: 12px; color: rgba(255,255,255,0.2); margin-top: 20px; 
 
 <!-- CHECKOUT -->
 <div class="checkout-section" id="checkout">
-  <div class="checkout-wrap">
-    <div class="checkout-info">
-      <h2>Order Your <span>NATI Pack</span></h2>
-      <p>Experience the full power of Ultra Sonicated functional mushrooms. One pack, 7 grams, 7 tablets. $30 flat — free shipping on all orders.</p>
-      <div class="product-preview">
-        <div style="width:80px;height:80px;background:linear-gradient(135deg,#1a0533,#2d0a5e);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:28px">🍄</div>
-        <div class="info">
-          <h3>NATI Ultra Sonicated Magic Mushroom</h3>
-          <div class="desc">7 Grams · 1G per tablet · 7 tablets</div>
+  <div style="max-width:700px;margin:0 auto;text-align:center">
+    <h2 style="font-size:clamp(2rem,4vw,3rem);font-weight:900;margin-bottom:16px">Order Your <span style="background:linear-gradient(135deg,#a855f7,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent">NATI Pack</span></h2>
+    <p style="font-size:16px;color:#94a3b8;line-height:1.7;margin-bottom:40px">Experience the full power of Ultra Sonicated functional mushrooms. 7 grams · 7 tablets · $30 flat — free shipping.</p>
+    <div style="background:rgba(124,58,237,0.1);border:1px solid rgba(168,85,247,0.3);border-radius:20px;padding:30px;margin-bottom:32px;display:flex;align-items:center;gap:20px;text-align:left">
+      <div style="width:80px;height:80px;background:linear-gradient(135deg,#06020f,#0d0520);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <img src="logo.png" alt="NATI" style="width:70px;object-fit:contain">
+      </div>
+      <div style="flex:1">
+        <div style="font-weight:700;font-size:16px;margin-bottom:4px">NATI Ultra Sonicated Magic Mushroom</div>
+        <div style="font-size:13px;color:#94a3b8;margin-bottom:8px">7 Grams · 1G per tablet · 7 tablets</div>
           <div class="price">$30.00</div>
         </div>
       </div>
-      <div class="checkout-guarantees">
-        <div class="guarantee"><span class="g-icon">🚀</span> Fast shipping — ships within 24-48 hours</div>
-        <div class="guarantee"><span class="g-icon">🔒</span> Secure checkout powered by Stripe</div>
-        <div class="guarantee"><span class="g-icon">💯</span> Satisfaction guaranteed</div>
-        <div class="guarantee"><span class="g-icon">📦</span> Discreet packaging</div>
-        <div class="guarantee"><span class="g-icon">✅</span> 100% legal formula</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px">
+        <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)">🚀 Fast shipping — ships within 24-48 hours</div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)">🔒 Secure checkout powered by Stripe</div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)">📦 Discreet packaging</div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)">✅ 100% legal formula</div>
       </div>
-    </div>
-
-    <div>
-      <div class="checkout-form-card" id="formCard">
-        <div class="form-title">Complete Your Order</div>
-        <div class="form-sub">Fill in your details below to get your NATI pack</div>
-
-        <form id="orderForm" novalidate>
-          <div class="form-section">Personal Information</div>
-          <div class="form-row">
-            <div class="form-group" id="grp-firstName"><label>First Name</label><input type="text" id="firstName" placeholder="Jordan"><div class="field-error">Required</div></div>
-            <div class="form-group" id="grp-lastName"><label>Last Name</label><input type="text" id="lastName" placeholder="Smith"><div class="field-error">Required</div></div>
-          </div>
-          <div class="form-group" id="grp-email"><label>Email Address</label><input type="email" id="email" placeholder="jordan@example.com"><div class="field-error">Valid email required</div></div>
-          <div class="form-group" id="grp-phone"><label>Phone Number</label><input type="tel" id="phone" placeholder="(555) 123-4567"><div class="field-error">Valid phone required</div></div>
-
-          <div class="divider"></div>
-          <div class="form-section">Shipping Address</div>
-          <div class="form-group" id="grp-address"><label>Street Address</label><input type="text" id="address" placeholder="123 Main Street"><div class="field-error">Required</div></div>
-          <div class="form-row">
-            <div class="form-group" id="grp-city"><label>City</label><input type="text" id="city" placeholder="Los Angeles"><div class="field-error">Required</div></div>
-            <div class="form-group" id="grp-state"><label>State</label><input type="text" id="state" placeholder="CA"><div class="field-error">Required</div></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group" id="grp-zip"><label>ZIP Code</label><input type="text" id="zip" placeholder="90001"><div class="field-error">Required</div></div>
-            <div class="form-group"><label>Country</label><select id="country"><option value="US">🇺🇸 United States</option><option value="CA">🇨🇦 Canada</option><option value="GB">🇬🇧 United Kingdom</option></select></div>
-          </div>
-
-          <div class="divider"></div>
-          <div class="form-section">Quantity</div>
-          <div class="qty-wrap">
-            <button type="button" class="qty-btn" onclick="changeQty(-1)">−</button>
-            <span class="qty-num" id="qty-display">1</span>
-            <button type="button" class="qty-btn" onclick="changeQty(1)">+</button>
-            <span class="qty-label">pack(s) × $30 each</span>
-          </div>
-
-          <div class="divider"></div>
-          <div class="form-section">Payment Details</div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-            <span style="font-size:14px;font-weight:600">Card Information</span>
-            <span class="secure-note">🔒 SSL Secured</span>
-          </div>
-          <div class="card-wrap" id="cardWrap">
-            <div id="card-element"></div>
-          </div>
-          <div id="card-errors"></div>
-          <div class="card-icons">
-            <span>VISA</span><span>MC</span><span>AMEX</span><span>DISC</span>
-          </div>
-
-          <div class="order-box">
-            <div class="order-row"><span>NATI Pack × <span id="qty-label">1</span></span><span id="subtotal-display">$30.00</span></div>
-            <div class="order-row"><span>Shipping</span><span style="color:#10b981">FREE</span></div>
-            <div class="order-total"><span>Total</span><span id="total-display">$30.00</span></div>
-          </div>
-
-          <div class="consent-wrap">
-            <input type="checkbox" id="consent">
-            <label for="consent">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>. I confirm I am 21+ years of age and this product is legal in my jurisdiction.</label>
-          </div>
-          <div class="field-error" id="consent-error">You must agree to continue</div>
-
-          <button type="submit" class="submit-btn" id="submitBtn">🍄 Complete Order — $30.00</button>
-          <p class="form-footer-note">Powered by Stripe · Discreet packaging · Ships in 24-48 hours</p>
-        </form>
-      </div>
-
-      <div class="success-msg" id="successMsg">
-        <span class="success-icon">🍄</span>
-        <h3>Order Confirmed!</h3>
-        <p id="success-greeting"></p>
-        <div class="receipt-box">
-          <div class="receipt-row"><span>Product</span><span>NATI Ultra Sonicated Magic Mushroom</span></div>
-          <div class="receipt-row"><span>Amount Charged</span><span id="success-amount"></span></div>
-          <div class="receipt-row"><span>Shipping to</span><span id="success-address"></span></div>
-          <div class="receipt-row"><span>Estimated Delivery</span><span>3-5 business days</span></div>
-        </div>
-        <p>A confirmation email has been sent to <strong id="success-email"></strong>. Your order ships within 24-48 hours in discreet packaging.</p>
-      </div>
+      <a href="https://buy.stripe.com/aFaeV66BNguOd1Jd4A9AA03" class="btn-main" style="display:inline-block;font-size:20px;padding:20px 60px">🍄 Order Now — $30</a>
+      <p style="margin-top:16px;font-size:13px;color:#94a3b8">Secure payment via Stripe · Apple Pay & Google Pay accepted · Ships in 24-48 hours</p>
     </div>
   </div>
 </div>
